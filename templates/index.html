@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tube2Go - YouTube Downloader</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Download Music/Video from YouTube</h1>
-    <form action="/download" method="POST">
-        <label for="url">Enter YouTube URL:</label>
-        <input type="text" id="url" name="url" required>
-        <button type="submit">Download</button>
-    </form>
-  <footer>©2024 William Felix - Tube2Go v1.0</footer>
+    <div class="container">
+        <h1>Download Music/Video from YouTube for free</h1></h1>
+        <form action="/download" method="POST">
+            <label for="url">Enter YouTube URL:</label>
+            <input type="text" id="url" name="url" placeholder="Paste YouTube link here" required>
+            
+            <div class="format-selection">
+                <label for="format">Choose format:</label>
+                <select id="format" name="format">
+                    <option value="video">Video</option>
+                    <option value="audio">Audio</option>
+                </select>
+            </div>
+
+            <button type="submit">Download</button>
+        </form>
+    </div>
+    <footer>©2024 William Felix - Tube2Go v1.0 (Beta)</footer>
 </body>
 </html>
